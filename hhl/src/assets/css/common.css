@@ -1,0 +1,122 @@
+/* common.css begin */
+blockquote, th, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4,
+h5, h6, input, li, ol, p, pre, td, textarea, ul {
+    margin: 0;
+    padding: 0
+}
+html{
+  font-size: 37.5px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent
+}
+
+fieldset, img {
+  border: 0
+}
+
+/* IOS禁止微信调整字体大小 */
+body {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+
+a, a:hover, a:link {
+  color: #4a4a4a
+}
+
+.fl {
+  float: left
+}
+
+.fr {
+  float: right
+}
+.clearfix:before {
+  content: ".";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  overflow: hidden
+}
+
+.clearfix:after {
+  content: ".";
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  overflow: hidden
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+img {
+  border: none;
+  vertical-align: middle
+}
+
+ul {
+  list-style: none
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent
+}
+
+a:active {
+  outline: 0
+}
+/* common.css end */
+
+/* loading begin */
+#shadowDiv{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px ;
+  left : 0px;
+  background-color: transparent;
+  /*filter: alpha(opacity = 30);*/
+  /*opacity: 0.3;*/
+  z-index: 655;
+  display: none;
+  align-items:center;
+  justify-content: center;
+}
+#shadowDiv .loadingbg{
+  margin: auto auto;
+  padding: 0;
+  width: 124px;
+  height: 124px;
+  background-color: #000;
+  opacity: .8;   /* airong 10.06 */
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  z-index: 10;
+}
+#shadowDiv .loadingbg span{
+  font-size: 0.3rem; /* airong 10.06 */
+  color: white;
+  padding-top:10px;
+}
+/* loading end */

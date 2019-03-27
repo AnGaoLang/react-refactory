@@ -1,0 +1,145 @@
+.LuckyDraw {
+  padding-top: 1px;
+  background: white url(../../assets/images/twothousand_kin/LuckyDraw/e_1.jpg) no-repeat center top;
+  background-size: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.LuckyDraw .whitepanel {
+  width: 100%;
+  height: 3.66rem;
+  margin: 1.5rem auto auto;
+  font-family: serif;
+}
+.LuckyDraw .introduce {
+  padding-top: .15rem;
+}
+
+.LuckyDraw .introduce .ntx {
+  height:0.355rem;
+}
+
+.LuckyDraw .introduce div:nth-child(1) {
+  margin-top:10px;
+  font-size: 0.4744rem;  /* airong 10.05 */
+  font-weight:bold;
+  text-align: center;
+  color: #c59b5b;
+  font-family: Microsoft Yahei;
+}
+.LuckyDraw .introduce div:nth-child(2) {
+  margin-top:10px;
+  font-size: 0.4rem;
+  font-weight:bold;
+  text-align: center;
+  /*color: #c59b5b;*/
+  color:#459190;
+  font-family: Microsoft Yahei;
+}
+.LuckyDraw .click-introduce {
+  position: absolute;
+  bottom: 1.85rem;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  font-size: 0.5rem;
+  text-indent: 0.25rem;
+}
+.LuckyDraw #randomizeButton {
+display: block;
+width: 3.4966rem;
+height: 1.4027rem;
+position: absolute;
+z-index: 10000;
+left:50%;
+top:50%;
+transform: translateX(-50%);
+margin-top:3.1939rem;
+background: url(../../assets/images/twothousand_kin/LuckyDraw/e_6.png) 0 0/100% 100% no-repeat;
+}
+/* .LuckyDraw #randomizeButton img {
+  width: 3.4966rem;
+  height: auto;
+} */
+.LuckyDraw .smoke {
+  /*height: 1.15rem;*/
+  width: 100%;
+  position: fixed;
+  bottom: 0.5rem;
+}
+.LuckyDraw .clicklotterydraw {
+  width: 3.6266rem;
+  height: 1.1466rem;
+  line-height: 1.16rem;
+  margin: 0rem auto .5rem auto;
+  letter-spacing: 4px;
+  font-size: 16px;
+  text-align: center;
+  color: #552208;
+}
+.LuckyDraw .footer {
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  color: #cda05d;
+}
+.LuckyDraw .footer p {
+  width: 100%;
+  display: block;
+}
+.LuckyDraw .container {
+  margin-top: .35rem;
+}
+.LuckyDraw .container .row {
+  width: 6.8rem;
+  margin: 0 auto;
+  padding-top:  2.17rem; /*20181102*/
+  padding-bottom: 2.43rem;/*20181102*/
+  position:relative;
+  right:-.15rem;/*20181102*/
+  height:1.5rem;/*20181102*/
+}
+.LuckyDraw .container .col-sm-4 {
+  width: 33.33%;/*20181102*/
+  height:1.5rem;/*20181102*/
+}
+.LuckyDraw .container .randomizeMachine img {
+  width: 1.5rem;
+  height: auto;
+  margin-top: 0.05rem;
+}
+.LuckyDraw .container .randomizeMachine i {
+  display:inline;
+  float:left;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0; /*20181102*/
+  padding: 0;/*20181102*/
+  background: url(../../assets/images/twothousand_kin/LuckyDraw/201811012233.png) no-repeat;
+  background-size:1.5rem;
+}
+.LuckyDraw .container .randomizeMachine i.loubi {
+  background-position: 0 0;
+}
+.LuckyDraw .container .randomizeMachine i.fuka {
+  background-position: 0 -1.5rem;
+}
+.LuckyDraw .container .randomizeMachine i.lihe {
+  background-position: 0 -3rem;
+}
+.LuckyDraw .container .randomizeMachine i.hongbao {
+  background-position: 0 -4.5rem;
+}
+.LuckyDraw .container .randomizeMachine i.loulou {
+  background-position: 0 -6rem;
+}
+.LuckyDraw .container .randomizeMachine i.xuni {
+  background-position: 0 -7.5rem;
+}
+
+.footer_border {
+  margin-top: 0.5rem;
+  margin-bottom: -2px;
+  height: 13px;
+  background: url(../../assets/images/twothousand_kin/LuckyDraw/e_1_bottom.png) 0 0/100% 100% no-repeat;
+}

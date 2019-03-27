@@ -1,0 +1,35 @@
+.score {
+  width: 7rem;
+  margin: .4rem auto 0;
+  background: transparent;
+}
+
+.score p {
+  color: #552208;
+  font-size: 18px;
+  float: left;
+}
+
+.score .score-word {
+  font-size: 15px;
+  height: 25px;
+  line-height: 28px;
+  text-indent: 0.5rem;
+}
+
+.star span {
+  display: inline-block;
+  margin-right: 3px;
+  width: .5866rem;
+  height: .5466rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.high {
+  background: url(../../assets/images/star_1.png) no-repeat center top/100% 100%;
+}
+
+.nohigh {
+  background: url(../../assets/images/star_0.png) no-repeat center top/100% 100%;
+}

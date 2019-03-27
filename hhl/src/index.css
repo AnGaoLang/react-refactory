@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+#root,.container{
+  height: 100%;
+}

@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  padding: 0.27rem;
+  height: 100%;
+  background: url(../../assets/images/twothousand_kin/Verification/background_v_r.png) no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+}
+
+.container_bg {
+  position: relative;
+  height: 100%;
+  background: url(../../assets/images/twothousand_kin/Verification/background_v_b.png) 0 0/100% 100% no-repeat;
+}
+
+.whitepanel_top{
+  padding-top: 7.23rem;
+  /* padding-bottom: 4rem; */
+  margin: 0 auto 0.5rem auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* background: url(../../assets/images/twothousand_kin/Verification/verifcation_top654.png); */
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.whitepanel_error, .whitepanel_more {
+  position: relative;
+  z-index: 10;
+}
+
+.whitepanel_error > p {
+  font-size: 0.427rem;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 0.15rem;
+}
+
+.whitepanel_more > p {
+  font-size: 0.374rem;
+  text-align: center;
+  color: #955409;
+}
+
+.whitepanel_more > p:first-child {
+  font-size: 0.427rem;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 0.1rem;
+  color: #000;
+}
+
+.whitepanel_bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 6.5rem;
+  background: url(../../assets/images/twothousand_kin/Verification/background_b.png) 0 0/100% 100% no-repeat;
+}
+
+#verificationTetx {
+  width: 7.1133rem;
+  height: 1.16666rem;
+  line-height: 1.16666rem;
+  border-radius: 3px;
+  border: 1px solid #bf8440;
+  font-size: 16px;
+  text-align: center;
+  color: #999;
+  vertical-align: top;
+}
