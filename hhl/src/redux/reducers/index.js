@@ -6,11 +6,15 @@ function toDo(state=State, action) {
     case CHANGE_OPENID:
       return action.openId
     case CHANGE_TEST:
-      let stateTest = state.test;
-      let actionTest = action.test;
-      let actionIndex = action.index;
-      stateTest.
-      return Object.assign({})
+      const newTest = state.test.map(function (item, index) {
+        if (index == action.index) {
+          return {
+            test: action.test,
+            completed: action.completed
+          };
+        }
+      })
+      return Object.assign({}, state, {test: newTest})
     default:
       return state
   }

@@ -110,7 +110,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   console.log(dispatch);
   console.log(ownProps);
-  return {b: 1}
+  return {
+    b: (dispatch) => dispatch(action)
+  }
 }
 
 export default connect(
