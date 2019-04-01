@@ -3,14 +3,14 @@ import {
   CHANGE_TEST
  } from './actionTypes.js';
 
-function changeOpenid(id) {
+ export function changeOpenid(id) {
   return {
     type: CHANGE_OPENID,
-    openId: id
+    openID: id
   }
 }
 
-function changeTest(index, text, completed) {
+export function changeTest(index, text, completed) {
   return {
     type: CHANGE_TEST,
     index: index,
@@ -18,5 +18,3 @@ function changeTest(index, text, completed) {
     completed: completed
   }
 }
-
-export default reducer

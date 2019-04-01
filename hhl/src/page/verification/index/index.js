@@ -5,16 +5,18 @@ import Verification from '../verification';
 import Footer from 'src/component/footer/footer.js';
 import {get, post} from 'src/utils/fetch.js';
 import img from 'src/assets/images/twothousand_kin/Verification/verifcation_top654.png';
+import { changeOpenid } from 'src/redux/action/action.js';
 
 class VerificationIndex extends Component {
   constructor (props) {
     super(props);
-    console.log(this.props);
     this.text = React.createRef();
     this.state = {
       style: {position: 'absolute'},
       id: '46501d72-a42a-438c-908b-83bad134354c'
     };
+    console.log(props.a)
+    console.log(this.props.all)
 
     this.iosReszie = this.iosReszie.bind(this);
   }
@@ -82,13 +84,18 @@ class VerificationIndex extends Component {
       <Verification
         topBg={img}
         middle={(
-          <input placeholder='请输入验证码'
+          <div>
+          <input placeholder={this.props.a}
               id='verificationTetx'
               maxLength='4'
               type='number'
               onBlur={this.iosReszie}
               ref={this.text}
+              onClick={() => this.props.b(changeOpenid('2sadsad'))}
             />
+            <span>{this.props.all.test[0].text}</span>
+          </div>
+          
         )}
         bottom={(
           <Footer
@@ -102,16 +109,19 @@ class VerificationIndex extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
-  console.log(ownProps);
-  return {a: 1}
+  // console.log(state);
+  // console.log(ownProps);
+  return {
+    a: state.openID,
+    all: state
+  }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  console.log(dispatch);
-  console.log(ownProps);
+  // console.log(dispatch);
+  // console.log(ownProps);
   return {
-    b: (dispatch) => dispatch(action)
+    b: (action) => dispatch(action)
   }
 }
 

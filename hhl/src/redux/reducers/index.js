@@ -4,7 +4,8 @@ import { CHANGE_OPENID, CHANGE_TEST } from '../action/actionTypes';
 function toDo(state=State, action) {
   switch (action.type) {
     case CHANGE_OPENID:
-      return action.openId
+    // return action.openID
+      return Object.assign({}, state, {openID: action.openID})
     case CHANGE_TEST:
       const newTest = state.test.map(function (item, index) {
         if (index == action.index) {
