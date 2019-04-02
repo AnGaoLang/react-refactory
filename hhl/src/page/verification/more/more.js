@@ -12,7 +12,7 @@ class VerificationError extends Component {
 
   goIndex () {
     console.log(this.props);
-    this.props.history.push({pathname: '/', search: this.props.location.search});
+    this.props.history.push({pathname: '/'});
   }
 
   componentDidMount () {

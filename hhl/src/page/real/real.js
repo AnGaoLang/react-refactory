@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { get, post } from 'src/utils/fetch';
 import global from 'src/utils/global';
 import Swiper from 'src/component/swiper/swiper';
@@ -14,9 +15,10 @@ import img4 from 'src/assets/images/twothousand_kin/banner4.jpg';
 import resultV from 'src/assets/images/common/result_v.png';
 
 class Real extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
+      openId: props.openId,
       realPageH: '',
       styleObj: {
         position: 'static',
@@ -24,6 +26,7 @@ class Real extends Component {
         fontSize: '9px'
       }
     };
+    console.log(this.state.openId);
     this.id = ''; // id
     // 在高度足够没有滚动条时，需要使用height: 100%;是盒子铺满页面，
     // 这种情况下，this.realPage的高度将被固定为视口高度，所有获取的高度不准，需要获取子节点的高度解决滚动条情况下的适配
@@ -157,7 +160,7 @@ class Real extends Component {
               className="cloudlink"
               id="btn"
               onClick={() => {
-                this.props.history.push({ pathname: '/luckyDraw' });
+                this.props.history.push({ pathname: '/luckyDraw'});
               }}
             >
               <span>点击抽奖</span>
@@ -170,4 +173,12 @@ class Real extends Component {
   }
 }
 
-export default Real;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    openId: state.openID
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(Real);

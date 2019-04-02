@@ -13,11 +13,9 @@ class VerificationIndex extends Component {
     this.text = React.createRef();
     this.state = {
       style: {position: 'absolute'},
-      id: '46501d72-a42a-438c-908b-83bad134354c'
+      id: props.openId
     };
-    console.log(props.a)
-    console.log(this.props.all)
-
+    console.log(this.state.openId);
     this.iosReszie = this.iosReszie.bind(this);
   }
 
@@ -51,20 +49,20 @@ class VerificationIndex extends Component {
     }
     if (dataObj.result=='SUCCESS') {
       if (!dataObj.follow) {
-        that.props.history.push({pathname: '/WxFollow', search: `?id=${that.state.id}`});
+        that.props.history.push({pathname: '/WxFollow'});
       }else if (dataObj.test == 1) {
-        that.props.history.push({pathname: '/RealTest', search: `?id=${that.state.id}`});
+        that.props.history.push({pathname: '/RealTest'});
       }else if (dataObj.count == 1) {
-        that.props.history.push({pathname: '/RealFirst', search: `?id=${that.state.id}`});
+        that.props.history.push({pathname: '/RealFirst'});
       } else {
-        that.props.history.push({pathname: '/Real', search: `?id=${that.state.id}`});
+        that.props.history.push({pathname: '/Real'});
       }        		
     }else{
       if (dataObj.verifyTimes < 3) {
         // that.props.history.push({pathname: '/VerificationMore', search: `?id=${that.state.id}`});
-        that.props.history.push({pathname: '/VerificationFake', search: `?id=${that.state.id}`});
+        that.props.history.push({pathname: '/VerificationFake'});
       } else {
-        that.props.history.push({pathname: '/VerificationError', search: `?id=${that.state.id}`});
+        that.props.history.push({pathname: '/VerificationError'});
       }
     }
     // post('/Code/checkVerifyCode', {'id': that.state.id, 'code': textValue}).then((response) => {
@@ -91,9 +89,7 @@ class VerificationIndex extends Component {
               type='number'
               onBlur={this.iosReszie}
               ref={this.text}
-              onClick={() => this.props.b(changeOpenid('2sadsad'))}
             />
-            <span>{this.props.all.test[0].text}</span>
           </div>
           
         )}
@@ -109,19 +105,14 @@ class VerificationIndex extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state);
-  // console.log(ownProps);
   return {
-    a: state.openID,
-    all: state
+    openId: state.openID
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  // console.log(dispatch);
-  // console.log(ownProps);
   return {
-    b: (action) => dispatch(action)
+    changeOpenId: (action) => dispatch(action)
   }
 }
 
