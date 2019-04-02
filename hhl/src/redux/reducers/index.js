@@ -1,5 +1,5 @@
 import State from '../state/state';
-import { CHANGE_OPENID, CHANGE_TEST } from '../action/actionTypes';
+import { CHANGE_OPENID, CHANGE_TEST } from '../actions/actionsTypes';
 
 function toDo(state=State, action) {
   switch (action.type) {

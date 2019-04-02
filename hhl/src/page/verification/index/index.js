@@ -5,7 +5,7 @@ import Verification from '../verification';
 import Footer from 'src/component/footer/footer.js';
 import {get, post} from 'src/utils/fetch.js';
 import img from 'src/assets/images/twothousand_kin/Verification/verifcation_top654.png';
-import { changeOpenid } from 'src/redux/action/action.js';
+import { changeOpenid } from 'src/redux/actions/actions.js';
 
 class VerificationIndex extends Component {
   constructor (props) {
