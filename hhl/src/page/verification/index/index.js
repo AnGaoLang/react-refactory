@@ -15,7 +15,7 @@ class VerificationIndex extends Component {
       style: {position: 'absolute'},
       id: props.openId
     };
-    console.log(this.state.openId);
+    console.log(this.state.id);
     this.iosReszie = this.iosReszie.bind(this);
   }
 
@@ -67,13 +67,17 @@ class VerificationIndex extends Component {
     }
     // post('/Code/checkVerifyCode', {'id': that.state.id, 'code': textValue}).then((response) => {
     //     console.log(response)
-    //     // dataObj=JSON.parse(result);
+    //     dataObj=JSON.parse(result);
     // })
   }
 
   componentDidMount () {
-    get('/Home/init', {
-      openid: 'oqxQpvx-4dHtqq-N5c-XV8sEFxlk'
+    get('/Home/init').then(res => {
+      console.log(res.status)
+      console.log(res.json())
+      console.log(res.json().then(r => {
+        console.log(r)
+      }));
     })
   }
   

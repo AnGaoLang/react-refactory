@@ -1,7 +1,7 @@
 import { 
   CHANGE_OPENID,
   CHANGE_TEST
- } from './actionTypes.js';
+ } from './actionsTypes.js';
 
  export function changeOpenid(id) {
   return {

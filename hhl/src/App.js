@@ -3,6 +3,8 @@ import { HashRouter as Router, Switch, Route} from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from 'src/redux/reducers';
+import './mockData.js';
+
 
 import VerificationIndex from 'src/page/verification/index/index';
 import VerificationError from 'src/page/verification/error/error';
