@@ -72,12 +72,10 @@ class VerificationIndex extends Component {
   }
 
   componentDidMount () {
-    get('/Home/init').then(res => {
-      console.log(res.status)
-      console.log(res.json())
-      console.log(res.json().then(r => {
+    get('Home/init').then(res => {
+      res.json().then(r => {
         console.log(r)
-      }));
+      });
     })
   }
   

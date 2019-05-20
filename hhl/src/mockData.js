@@ -19,6 +19,11 @@ const response = Mock.mock({
     'number|1-100': 100
   }]
 });
-FetchMock.mock('*', () => {
-  return response
-})
+FetchMock.once('/Home\/init/', () => {
+  return response;
+});
+// 其他路由使用原生fetch，这段代码必须放最后
+FetchMock.once('*', (url, options) => {
+  FetchMock.restore();
+  return fetch(url, options);
+});
